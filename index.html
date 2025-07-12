@@ -3,190 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="شایانیو: خفن‌ترین سایت نمونه سوالات پایه هفتم، با طراحی حرفه‌ای، رنگ‌های شاد، افکت‌های جذاب و دانلود مستقیم PDF!">
-  <meta name="keywords" content="نمونه سوال هفتم, ریاضی هفتم, علوم هفتم, فارسی هفتم, اجتماعی هفتم, سوال امتحانی, PDF سوال, نوبت اول دوم">
+  <meta name="description" content="شایانیو: بانک نمونه‌سوال و جزوه مدارس تیزهوشان (پایه هفتم) با طراحی شاد، افکت‌های جذاب و دانلود مستقیم PDF.">
+  <meta name="keywords" content="نمونه سوال تیزهوشان هفتم, جزوه تیزهوشان, ریاضی هفتم تیزهوشان, علوم هفتم تیزهوشان, اجتماعی هفتم, پیام های آسمان هفتم, قرآن هفتم">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Shayan Dadkhah">
   <meta http-equiv="Content-Language" content="fa">
-  <title>🎉 شایانیو | نمونه سوالات شاد و حرفه‌ای پایه هفتم</title>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <title>🎉 شایانیو | نمونه‌سوال و جزوه تیزهوشان هفتم</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    /* ---------- پایه ---------- */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'Vazirmatn',sans-serif;direction:rtl;color:#1e293b;
+      /* گرادیان متحرّک */
+      background:linear-gradient(120deg,#fef9c3,#f0abfc,#a5f3fc,#bbf7d0,#fde047,#ffe4e6);
+      background-size:600% 600%;
+      animation:bgMove 15s ease infinite,fadeBody 1s ease;
     }
-
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      direction: rtl;
-      background: linear-gradient(to right, #fef9c3, #ffe4e6, #e0f2fe);
-      color: #1e293b;
-      animation: fadeInBody 1s ease;
+    @keyframes bgMove{
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
     }
-
-    header {
-      background: linear-gradient(135deg, #ec4899, #8b5cf6, #06b6d4);
-      color: white;
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-      font-size: 2.6rem;
-      font-weight: bold;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-      animation: dropIn 1s ease-in-out;
+    @keyframes fadeBody{from{opacity:0}to{opacity:1}}
+    /* ---------- هِرو ---------- */
+    .hero{
+      background:rgba(255,255,255,0.2);
+      backdrop-filter:blur(6px);
+      text-align:center;padding:5rem 1rem 4rem;
+      animation:dropIn 1s ease;
     }
-
-    header p {
-      font-size: 1.3rem;
-      color: #fef9ff;
-      margin-top: 1rem;
+    .hero h1{font-size:3.2rem;font-weight:700;color:#6d28d9}
+    .hero p{font-size:1.6rem;margin-top:1.4rem;font-weight:700;color:#334155}
+    @keyframes dropIn{from{transform:translateY(-60px);opacity:0}to{transform:translateY(0);opacity:1}}
+    /* ---------- شبکه کارت ---------- */
+    main{
+      max-width:1500px;margin:4rem auto 2.5rem;
+      padding:0 2rem;
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:3rem;
     }
-
-    main {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 2rem;
+    .card{
+      position:relative;overflow:hidden;background:#fff;border-radius:28px;
+      padding:3rem 2.2rem 3.2rem;text-align:center;
+      box-shadow:0 14px 32px rgba(0,0,0,.18);
+      transition:.35s;
     }
-
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+    .card::before{
+      content:'';position:absolute;top:-55%;left:-55%;width:120%;height:120%;
+      background:radial-gradient(circle at top left,#f0abfc,#a5f3fc);
+      transform:rotate(45deg);opacity:.12;transition:.6s;
     }
-
-    .card::before {
-      content: '';
-      position: absolute;
-      width: 120%;
-      height: 120%;
-      background: radial-gradient(circle at top left, #f0abfc, #a5f3fc);
-      top: -60%;
-      left: -60%;
-      transform: rotate(45deg);
-      transition: all 0.5s;
-      z-index: 0;
-      opacity: 0.1;
+    .card:hover{transform:scale(1.07) rotateZ(-1.3deg);box-shadow:0 26px 55px rgba(0,0,0,.25)}
+    .card:hover::before{top:-30%;left:-30%;opacity:.28}
+    .card h2{position:relative;z-index:1;font-size:2rem;color:#7c3aed;margin-bottom:1.2rem}
+    .card p{position:relative;z-index:1;font-size:1.25rem;color:#475569;margin-bottom:2rem}
+    .actions{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap}
+    .btn{
+      position:relative;z-index:1;min-width:145px;text-align:center;
+      background:linear-gradient(to right,#f472b6,#3b82f6);color:#fff;
+      padding:.9rem 1.6rem;border-radius:16px;font-weight:700;font-size:1.05rem;
+      text-decoration:none;transition:.3s;
     }
-
-    .card:hover::before {
-      top: -30%;
-      left: -30%;
-      opacity: 0.25;
+    .btn:hover{background:linear-gradient(to right,#ec4899,#6366f1)}
+    /* ---------- فوتر ---------- */
+    footer{
+      text-align:center;font-size:1.05rem;background:rgba(255,255,255,0.35);
+      backdrop-filter:blur(4px);color:#4b5563;padding:3rem 1rem 2.8rem;margin-top:5rem;
+      border-top:1px solid rgba(0,0,0,0.05)
     }
-
-    .card:hover {
-      transform: scale(1.05) rotateZ(-1.5deg);
-      box-shadow: 0 16px 35px rgba(0,0,0,0.25);
-    }
-
-    .card h2 {
-      position: relative;
-      z-index: 2;
-      color: #7c3aed;
-      font-size: 1.6rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .card p {
-      position: relative;
-      z-index: 2;
-      font-size: 1rem;
-      color: #475569;
-      margin-bottom: 1.2rem;
-    }
-
-    .card a {
-      position: relative;
-      z-index: 2;
-      display: inline-block;
-      background: linear-gradient(to right, #f472b6, #3b82f6);
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 12px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .card a:hover {
-      background: linear-gradient(to right, #ec4899, #6366f1);
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-      background: #fdf4ff;
-      color: #6b7280;
-      border-top: 1px solid #e9d5ff;
-    }
-
-    @keyframes fadeInBody {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes dropIn {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @media (max-width: 600px) {
-      header {
-        font-size: 2rem;
-        padding: 2rem 1rem;
-      }
-      .card h2 {
-        font-size: 1.3rem;
-      }
+    footer code{direction:ltr}
+    /* ---------- واکنش‌گرایی ---------- */
+    @media(max-width:600px){
+      .hero h1{font-size:2.5rem}.hero p{font-size:1.3rem}
+      .card h2{font-size:1.6rem}.card p{font-size:1.1rem}
     }
   </style>
 </head>
 <body>
 
-  <header>
-    🎉 شایانیو
-    <p>شادترین و حرفه‌ای‌ترین نمونه‌سوالات هفتم | طراحی شده برای دانش‌آموزان خاص!</p>
-  </header>
-
+  <!-- هِرو -->
+  <section class="hero">
+    <h1>🎉 شایانیو</h1>
+    <p>نمونه‌سوال و جزوات مدارس تیزهوشان پایه هفتم</p>
+  </section>
+  <!-- کارت‌ها -->
   <main>
-    <div class="card">
+    <!-- ریاضی -->
+    <article class="card">
       <h2>📘 ریاضی هفتم</h2>
-      <p>سوالات مفهومی + طبقه‌بندی‌شده با پاسخ</p>
-      <a href="riazi.html">مشاهده و دانلود</a>
-    </div>
-    <div class="card">
+      <p>نمونه‌سوال + جزوه فصل به فصل</p>
+      <div class="actions">
+        <a class="btn" href="riazi.html">نمونه‌سوالات</a>
+        <a class="btn" href="riazi-notes.html">جزوه‌ها</a>
+      </div>
+    </article>
+
+    <!-- علوم -->
+    <article class="card">
       <h2>🔬 علوم تجربی</h2>
-      <p>سوالات علوم برای نوبت اول و دوم</p>
-      <a href="olomi.html">مشاهده و دانلود</a>
-    </div>
+      <p>تمرین‌های آزمایشگاهی + جزوه مفاهیم</p>
+      <div class="actions">
+        <a class="btn" href="olomi.html">نمونه‌سوالات</a>
+        <a class="btn" href="olomi-notes.html">جزوه‌ها</a>
+      </div>
+    </article>
 
-    <div class="card">
+    <!-- اجتماعی -->
+    <article class="card">
       <h2>🌍 مطالعات اجتماعی</h2>
-      <p>تمرین برای امتحان نهایی و تحلیل مفهومی</p>
-      <a href="ejtemai.html">مشاهده و دانلود</a>
-    </div>
+      <p>تحلیل‌های مفهومی + خلاصه درس</p>
+      <div class="actions">
+        <a class="btn" href="ejtemai.html">نمونه‌سوالات</a>
+        <a class="btn" href="ejtemai-notes.html">جزوه‌ها</a>
+      </div>
+    </article>
 
-    <div class="card">
-      <h2>📝 فارسی</h2>
-      <p>املا، آرایه، قرابت و درک متن حرفه‌ای</p>
-      <a href="farsi.html">مشاهده و دانلود</a>
-    </div>
+    <!-- پیام‌های آسمان -->
+    <article class="card">
+      <h2>📚 پیام‌های آسمان</h2>
+      <p>نمونه‌سوال دینی + جزوه مفصل</p>
+      <div class="actions">
+        <a class="btn" href="din.html">نمونه‌سوالات</a>
+        <a class="btn" href="din-notes.html">جزوه‌ها</a>
+      </div>
+    </article>
+
+    <!-- قرآن -->
+    <article class="card">
+      <h2>📖 قرآن</h2>
+      <p>آیات منتخب + تمرین مفاهیم</p>
+      <div class="actions">
+        <a class="btn" href="quran.html">نمونه‌سوالات</a>
+        <a class="btn" href="quran-notes.html">جزوه‌ها</a>
+      </div>
+    </article>
   </main>
 
+  <!-- فوتر -->
   <footer>
     طراحی و توسعه: شایانیو | تمام حقوق محفوظ است © 2025<br>
-    آدرس: <code>shayan1454.github.io/shayanew1</code>
+    <code>shayan1454.github.io/shayanew1</code>
   </footer>
 
 </body>

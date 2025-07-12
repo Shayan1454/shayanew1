@@ -1,98 +1,153 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="سایت شایانیو | کامل‌ترین منبع نمونه سوالات پایه هفتم، ریاضی، علوم، اجتماعی و فارسی با طراحی مدرن، حرفه‌ای و قابل دانلود مستقیم.">
-  <meta name="keywords" content="شایانیو, نمونه سوال هفتم, سوال امتحانی, سوال ترم هفتم, دانلود نمونه سوال پایه هفتم, سوال نهایی, سوال امتحانی pdf">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="شایانیو: خفن‌ترین سایت نمونه سوالات پایه هفتم، با طراحی حرفه‌ای، رنگ‌های شاد، افکت‌های جذاب و دانلود مستقیم PDF!">
+  <meta name="keywords" content="نمونه سوال هفتم, ریاضی هفتم, علوم هفتم, فارسی هفتم, اجتماعی هفتم, سوال امتحانی, PDF سوال, نوبت اول دوم">
+  <meta name="robots" content="index, follow">
   <meta name="author" content="Shayan Dadkhah">
-  <meta name="robots" content="index, follow" />
-  <meta http-equiv="Content-Language" content="fa" />
-  <title>🌟 شایانیو | نمونه سوالات پایه هفتم - کامل، رایگان، حرفه‌ای</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="Content-Language" content="fa">
+  <title>🎉 شایانیو | نمونه سوالات شاد و حرفه‌ای پایه هفتم</title>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      background: linear-gradient(to right, #dbeafe, #eff6ff);
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Vazirmatn', sans-serif;
       direction: rtl;
+      background: linear-gradient(to right, #fef9c3, #ffe4e6, #e0f2fe);
+      color: #1e293b;
+      animation: fadeInBody 1s ease;
     }
 
     header {
-      background: linear-gradient(135deg, #0ea5e9, #0284c7);
+      background: linear-gradient(135deg, #ec4899, #8b5cf6, #06b6d4);
       color: white;
-      padding: 2rem 1rem;
       text-align: center;
-      font-size: 2.2rem;
+      padding: 3rem 1rem 2rem;
+      font-size: 2.6rem;
       font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      animation: dropIn 1s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      color: #fef9ff;
+      margin-top: 1rem;
     }
 
     main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-
-    .section {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 1200px;
+      margin: 2rem auto;
       padding: 2rem;
-      margin-bottom: 2rem;
-      transition: transform 0.2s ease;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
     }
 
-    .section:hover {
-      transform: translateY(-4px);
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
-    h2 {
-      color: #0284c7;
-      margin-bottom: 1rem;
+    .card::before {
+      content: '';
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      background: radial-gradient(circle at top left, #f0abfc, #a5f3fc);
+      top: -60%;
+      left: -60%;
+      transform: rotate(45deg);
+      transition: all 0.5s;
+      z-index: 0;
+      opacity: 0.1;
+    }
+
+    .card:hover::before {
+      top: -30%;
+      left: -30%;
+      opacity: 0.25;
+    }
+
+    .card:hover {
+      transform: scale(1.05) rotateZ(-1.5deg);
+      box-shadow: 0 16px 35px rgba(0,0,0,0.25);
+    }
+
+    .card h2 {
+      position: relative;
+      z-index: 2;
+      color: #7c3aed;
       font-size: 1.6rem;
+      margin-bottom: 0.8rem;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .card p {
+      position: relative;
+      z-index: 2;
+      font-size: 1rem;
+      color: #475569;
+      margin-bottom: 1.2rem;
     }
 
-    li {
-      margin-bottom: 1rem;
-    }
-
-    a {
-      text-decoration: none;
-      color: #1d4ed8;
-      font-weight: bold;
-      background-color: #e0f2fe;
-      padding: 0.6rem 1rem;
-      border-radius: 10px;
+    .card a {
+      position: relative;
+      z-index: 2;
       display: inline-block;
-      transition: background-color 0.3s ease;
+      background: linear-gradient(to right, #f472b6, #3b82f6);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
 
-    a:hover {
-      background-color: #bae6fd;
+    .card a:hover {
+      background: linear-gradient(to right, #ec4899, #6366f1);
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      background-color: #f1f5f9;
-      color: #475569;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
       margin-top: 3rem;
-      border-top: 1px solid #e2e8f0;
+      background: #fdf4ff;
+      color: #6b7280;
+      border-top: 1px solid #e9d5ff;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes dropIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     @media (max-width: 600px) {
       header {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        padding: 2rem 1rem;
+      }
+      .card h2 {
+        font-size: 1.3rem;
       }
     }
   </style>
@@ -100,49 +155,13 @@
 <body>
 
   <header>
-    🌟 شایانیو | بهترین نمونه سوالات پایه هفتم
+    🎉 شایانیو
+    <p>شادترین و حرفه‌ای‌ترین نمونه‌سوالات هفتم | طراحی شده برای دانش‌آموزان خاص!</p>
   </header>
 
   <main>
-
-    <div class="section">
-      <h2>📘 درس ریاضی</h2>
-      <ul>
-        <li><a href="riazi-term1.pdf" download>📥 نمونه سوال ترم اول</a></li>
-        <li><a href="riazi-term2.pdf" download>📥 نمونه سوال ترم دوم</a></li>
-      </ul>
+    <div class="card">
+      <h2>📘 ریاضی هفتم</h2>
+      <p>سوالات مفهومی + طبقه‌بندی‌شده با پاسخ</p>
+      <a href="riazi.html">مشاهده و دانلود</a>
     </div>
-
-    <div class="section">
-      <h2>🔬 علوم تجربی</h2>
-      <ul>
-        <li><a href="olomi-term1.pdf" download>📥 نمونه سوال ترم اول</a></li>
-        <li><a href="olomi-term2.pdf" download>📥 نمونه سوال ترم دوم</a></li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>🌍 مطالعات اجتماعی</h2>
-      <ul>
-        <li><a href="ejtemai-term1.pdf" download>📥 نمونه سوال ترم اول</a></li>
-        <li><a href="ejtemai-term2.pdf" download>📥 نمونه سوال ترم دوم</a></li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>📝 فارسی</h2>
-      <ul>
-        <li><a href="farsi-term1.pdf" download>📥 نمونه سوال ترم اول</a></li>
-        <li><a href="farsi-term2.pdf" download>📥 نمونه سوال ترم دوم</a></li>
-      </ul>
-    </div>
-
-  </main>
-
-  <footer>
-    طراحی و توسعه توسط شایانیو | تمام حقوق محفوظ است © 2025<br>
-    shayan1454.github.io/shayanew1
-  </footer>
-
-</body>
-</html>
